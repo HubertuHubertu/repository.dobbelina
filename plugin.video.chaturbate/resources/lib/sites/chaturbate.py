@@ -90,7 +90,7 @@ def Main():
 
 
 @site.register()
-def SetupMenu(url):
+def SetupMenu(url=''):
     i = utils.i18n
     site.add_dir(
         mt.c(mt.PINK, i('install_cbtv_repo')),
@@ -112,7 +112,7 @@ def SetupMenu(url):
 
 
 @site.register()
-def GenderMenu(url, section='f'):
+def GenderMenu(url='', section='f'):
     cfg = GENDER_CFG.get(section)
     if not cfg:
         utils.notify('ChaturbateTV', utils.i18n('menu_unknown_cat'))

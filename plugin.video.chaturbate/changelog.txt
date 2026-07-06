@@ -1,3 +1,6 @@
+[B]Version 1.4.3[/B]
+- Fix crash opening Female/Male/Couple/Trans menu (empty url parameter on Kodi 22)
+
 [B]Version 1.4.2[/B]
 - ChaturbateTV Repository (repository.chaturbatetv) — one-click install for GitHub auto-updates
 

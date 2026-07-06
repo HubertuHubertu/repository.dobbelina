@@ -164,7 +164,7 @@ def clear_addon_icon_cache():
             conn.close()
         except Exception as e:
             xbmc.log('ChaturbateTV: icon cache clear ({0}): {1}'.format(db_name, e), xbmc.LOGDEBUG)
-    xbmc.executebuiltin('Container.Update()')
+    xbmc.executebuiltin('Container.Refresh')
 
 
 def refresh_assets_if_needed():
