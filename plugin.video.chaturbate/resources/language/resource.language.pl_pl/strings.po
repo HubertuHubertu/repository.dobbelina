@@ -1,0 +1,302 @@
+# Kodi Media Center language file
+# Addon Name: ChaturbateTV
+# Addon id: plugin.video.chaturbate
+msgid ""
+msgstr ""
+"Project-Id-Version: ChaturbateTV\n"
+"Language: pl_PL\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "#30005"
+msgid "Use video thumbnail for poster/fanart"
+msgstr "Miniatura wideo jako poster (fanart tła bez zmian)"
+
+msgctxt "#30051"
+msgid "General"
+msgstr "Ogólne"
+
+msgctxt "#30054"
+msgid "Chaturbate"
+msgstr "Chaturbate"
+
+msgctxt "#30055"
+msgid "Preferred Playback mode"
+msgstr "Preferowany tryb odtwarzania"
+
+msgctxt "#30059"
+msgid "Favorites"
+msgstr "Ulubione"
+
+msgctxt "#30065"
+msgid "Cache"
+msgstr "Pamięć podręczna"
+
+msgctxt "#30100"
+msgid "Select Playback mode"
+msgstr "Wybierz tryb odtwarzania"
+
+msgctxt "#30101"
+msgid "HLS"
+msgstr "HLS"
+
+msgctxt "#30103"
+msgid "RTMP"
+msgstr "RTMP"
+
+msgctxt "#30110"
+msgid "Preferred sections"
+msgstr "Preferowane sekcje"
+
+msgctxt "#30111"
+msgid "Female"
+msgstr "Kobiety"
+
+msgctxt "#30112"
+msgid "Male"
+msgstr "Mężczyźni"
+
+msgctxt "#30113"
+msgid "Couple"
+msgstr "Pary"
+
+msgctxt "#30114"
+msgid "Trans"
+msgstr "Trans"
+
+msgctxt "#30200"
+msgid "Compress backup files"
+msgstr "Kompresuj pliki kopii zapasowej"
+
+msgctxt "#30201"
+msgid "Backup favourites"
+msgstr "Kopia zapasowa ulubionych"
+
+msgctxt "#30202"
+msgid "Restore favourites"
+msgstr "Przywróć ulubione"
+
+msgctxt "#30203"
+msgid "Clear favourites"
+msgstr "Wyczyść ulubione"
+
+msgctxt "#30214"
+msgid "Custom favorites folder"
+msgstr "Własny folder ulubionych"
+
+msgctxt "#30215"
+msgid "Favorites folder"
+msgstr "Folder ulubionych"
+
+msgctxt "#30451"
+msgid "Restore complete"
+msgstr "Przywracanie zakończone"
+
+msgctxt "#30452"
+msgid "Added: {0}[CR]Skipped (duplicates or non-Chaturbate): {1}"
+msgstr "Dodano: {0}[CR]Pominięto (duplikaty lub inne serwisy): {1}"
+
+msgctxt "#33011"
+msgid "Clear cache"
+msgstr "Wyczyść pamięć podręczną"
+
+msgctxt "#33015"
+msgid "Chaturbate"
+msgstr "Chaturbate"
+
+msgctxt "#33027"
+msgid "Page Item Limit (0=no pagination)"
+msgstr "Limit pozycji na stronie (0 = bez stronicowania)"
+
+msgctxt "#33100"
+msgid "Cumination is not installed. Install it temporarily, migrate favorites, then remove it if you like."
+msgstr "Cumination nie jest zainstalowane. Zainstaluj je tymczasowo, przenieś ulubione, a potem możesz je usunąć."
+
+msgctxt "#33101"
+msgid "No favorites database found in Cumination profile."
+msgstr "Nie znaleziono bazy ulubionych w profilu Cumination."
+
+msgctxt "#33102"
+msgid "Import Chaturbate favorites from Cumination?[CR]Existing entries with the same URL will be skipped.[CR]Only Chaturbate models are imported."
+msgstr "Przenieść ulubione Chaturbate z Cumination?[CR]Istniejące wpisy z tym samym adresem zostaną pominięte.[CR]Importowane są tylko modele Chaturbate."
+
+msgctxt "#33103"
+msgid "Migration complete.[CR]Added: {0}[CR]Skipped: {1}"
+msgstr "Migracja zakończona.[CR]Dodano: {0}[CR]Pominięto: {1}"
+
+msgctxt "#33110"
+msgid "Dependencies"
+msgstr "Zależności"
+
+msgctxt "#33111"
+msgid "Install Dobbelina Repository"
+msgstr "Zainstaluj repozytorium Dobbelina"
+
+msgctxt "#33112"
+msgid "Install missing dependencies"
+msgstr "Zainstaluj brakujące zależności"
+
+msgctxt "#33113"
+msgid "Migrate from Cumination (one-time)"
+msgstr "Migracja z Cumination (jednorazowo)"
+
+msgctxt "#33114"
+msgid "Setup & Dependencies"
+msgstr "Konfiguracja i zależności"
+
+msgctxt "#33120"
+msgid "Refresh thumbnails"
+msgstr "Odśwież miniatury"
+
+msgctxt "#33121"
+msgid "Search Models"
+msgstr "Szukaj modeli"
+
+msgctxt "#33122"
+msgid "Featured"
+msgstr "Polecane"
+
+msgctxt "#33123"
+msgid "Current Hour's Top Cams"
+msgstr "Top kamery tej godziny"
+
+msgctxt "#33124"
+msgid "Online Favorites"
+msgstr "Ulubione online"
+
+msgctxt "#33125"
+msgid "Followed Cams"
+msgstr "Obserwowane"
+
+msgctxt "#33126"
+msgid "My Saved Favorites"
+msgstr "Moje zapisane ulubione"
+
+msgctxt "#33127"
+msgid "Browse All — {0}"
+msgstr "Przeglądaj wszystko — {0}"
+
+msgctxt "#33128"
+msgid "Tags — {0}"
+msgstr "Tagi — {0}"
+
+msgctxt "#33129"
+msgid "Offline Rooms"
+msgstr "Pokoje offline"
+
+msgctxt "#33130"
+msgid "Unknown category"
+msgstr "Nieznana kategoria"
+
+msgctxt "#33131"
+msgid "New Cams"
+msgstr "Nowe kamery"
+
+msgctxt "#33132"
+msgid "Teen (18+)"
+msgstr "Nastolatki (18+)"
+
+msgctxt "#33133"
+msgid "Age 20–30"
+msgstr "Wiek 20–30"
+
+msgctxt "#33134"
+msgid "Age 30–50"
+msgstr "Wiek 30–50"
+
+msgctxt "#33135"
+msgid "Mature (50+)"
+msgstr "Dojrzałe (50+)"
+
+msgctxt "#33136"
+msgid "North America"
+msgstr "Ameryka Północna"
+
+msgctxt "#33137"
+msgid "South America"
+msgstr "Ameryka Południowa"
+
+msgctxt "#33138"
+msgid "Europe / Russia"
+msgstr "Europa / Rosja"
+
+msgctxt "#33139"
+msgid "Asia"
+msgstr "Azja"
+
+msgctxt "#33140"
+msgid "Other Regions"
+msgstr "Inne regiony"
+
+msgctxt "#33141"
+msgid "Next Page.. (Currently in Page {0} of {1})"
+msgstr "Następna strona.. (strona {0} z {1})"
+
+msgctxt "#33142"
+msgid "Refresh images"
+msgstr "Odśwież obrazy"
+
+msgctxt "#33143"
+msgid "Sort by: {0}"
+msgstr "Sortuj: {0}"
+
+msgctxt "#33144"
+msgid "Next Page ({0}/{1})"
+msgstr "Następna strona ({0}/{1})"
+
+msgctxt "#33145"
+msgid "No favorites found"
+msgstr "Brak ulubionych"
+
+msgctxt "#33146"
+msgid "Delete all saved favorites?"
+msgstr "Usunąć wszystkie zapisane ulubione?"
+
+msgctxt "#33147"
+msgid "Favorites cleared"
+msgstr "Ulubione wyczyszczone"
+
+msgctxt "#33148"
+msgid "Already in favorites"
+msgstr "Już w ulubionych"
+
+msgctxt "#33149"
+msgid "Update existing favorite [COLOR hotpink]{0}[/COLOR]?"
+msgstr "Zaktualizować ulubione [COLOR hotpink]{0}[/COLOR]?"
+
+msgctxt "#33150"
+msgid "Favorite updated"
+msgstr "Ulubione zaktualizowane"
+
+msgctxt "#33151"
+msgid "Favorite added"
+msgstr "Dodano do ulubionych"
+
+msgctxt "#33152"
+msgid "Favorite removed"
+msgstr "Usunięto z ulubionych"
+
+msgctxt "#33153"
+msgid "Moved to top"
+msgstr "Przeniesiono na górę"
+
+msgctxt "#33154"
+msgid "Moved down"
+msgstr "Przeniesiono w dół"
+
+msgctxt "#33155"
+msgid "Moved up"
+msgstr "Przeniesiono w górę"
+
+msgctxt "#33156"
+msgid "Moved to bottom"
+msgstr "Przeniesiono na dół"
+
+msgctxt "#33157"
+msgid "No favorites to back up"
+msgstr "Brak ulubionych do kopii zapasowej"
+
+msgctxt "#33158"
+msgid "Chaturbate images cleared"
+msgstr "Miniatury Chaturbate wyczyszczone"

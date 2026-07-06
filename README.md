@@ -2,13 +2,12 @@
   <img height="300" src="https://user-images.githubusercontent.com/46063764/103461711-a9eb6280-4d20-11eb-983b-516b022cbbf5.png">
 </p>
 
-# Cumination
+# Dobbelina Repository
 
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=FF8FE3&center=true&vCenter=true&width=600&lines=Welcome+to+Dobbelinas+repository;Home+of+the+Cumination++Add-on)](https://github.com/dobbelina/repository.dobbelina)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=FF8FE3&center=true&vCenter=true&width=600&lines=Welcome+to+Dobbelinas+repository;Home+of+Cumination+and+ChaturbateTV)](https://github.com/dobbelina/repository.dobbelina)
 
 All credit to the fantastic people at reddit who has provided the fixes, and especially jdoedev & 12asdfg12 & camilt
-
 
 and Whitecream & holisticdioxide who are the original author/s of the addon.
 
@@ -28,8 +27,21 @@ broken sites/catchers, or make a pull request.**
 
 </div>
 
+## ChaturbateTV (`plugin.video.chaturbate`)
 
+Lightweight Chaturbate-only fork of Cumination for Kodi (Android TV friendly).
 
+- **HLS proxy** for stable live streams
+- **Miami Nights** UI theme
+- **One-click** Dobbelina repo + dependency install from the addon menu
+- **Favorites** with optional one-time migration from Cumination
 
+Install via this repository (after adding `repository.dobbelina`) or from zip:  
+`plugin.video.chaturbate-1.4.1.zip`
 
+Direct Kodi repo URL (raw):  
+`https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml`
 
+## Cumination (`plugin.video.cumination`)
+
+Full multi-site addon — see `plugin.video.cumination/changelog.txt` for history.

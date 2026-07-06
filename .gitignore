@@ -1,2 +1,5 @@
 *.pyo
 *.bak
+__pycache__/
+*.pyc
+CXXX-master/

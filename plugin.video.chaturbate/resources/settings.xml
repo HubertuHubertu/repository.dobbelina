@@ -1,0 +1,52 @@
+<settings>
+    <category label="33110">
+        <setting id="install_dobbelina_repo" type="action" label="33111" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=utils.install_dobbelina_repo)" />
+        <setting id="install_missing_deps" type="action" label="33112" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=utils.install_missing_deps)" />
+    </category>
+    <category label="30054">
+        <setting type="lsep" label="30110" />
+        <setting id="chatfemale" type="bool" label="30111" default="true" />
+        <setting id="chatmale" type="bool" label="30112" default="true" />
+        <setting id="chatcouple" type="bool" label="30113" default="true" />
+        <setting id="chattrans" type="bool" label="30114" default="true" />
+        <setting type="lsep" label="30055" />
+        <setting id="chatplay" type="enum" label="30100" lvalues="30101|30103" default="0" />
+        <setting id="chaturbate" label="30003" type="bool" default="false" />
+    </category>
+    <category label="30051">
+        <setting id="chaturbateage" type="bool" label="30051" visible="false" default="false" />
+        <setting id="changelog_seen_version" type="text" visible="false" default="" />
+        <setting id="assets_refreshed_version" type="text" visible="false" default="" />
+        <setting id="pincode" type="text" visible="false" default="" />
+        <setting id="logintime" type="text" visible="false" default="" />
+        <setting id="customview" label="30008" type="bool" default="true" />
+        <setting id="posterfanart" label="30005" type="bool" default="true" />
+        <setting id="m3u8_use_ia" label="30016" type="bool" default="false" />
+        <setting id="setpin" type="action" label="30028" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=pin.SetPin)" />
+    </category>
+    <category label="30059">
+        <setting id="migrate_cumination_fav" type="action" label="33113" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=favorites.migrate_from_cumination)" />
+        <setting id="compressbackup" label="30200" type="bool" default="true" />
+        <setting id="item.limit" label="33027" type="slider" default="0" range="0,5,200" option="int" />
+        <setting id="custom_favorites" label="30214" type="bool" default="false" />
+        <setting id="favorites_path" enable="eq(-1,true)" type="folder" source="" label="30215" option="writeable" default=""/>
+        <setting id="backup_favorites" type="action" label="30201" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=favorites.backup_fav)" />
+        <setting id="restore_favorites" type="action" label="30202" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=favorites.restore_fav)" />
+        <setting id="clear_favorites" type="action" label="30203" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=favorites.clear_fav)" />
+    </category>
+    <category label="30065">
+        <setting type="lsep" label="30029" />
+        <setting id="clear_cache" label="33011" type="action" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=utils.clear_cache)"/>
+        <setting id="cache_time" label="30030" type="slider" default="4" range="1,1,8" option="int" />
+        <setting type="lsep" label="30031" />
+        <setting id="clear_cookies" label="30032" type="action" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=utils.clear_cookies)"/>
+    </category>
+    <category label="33015">
+        <setting type="lsep" label="33016" />
+        <setting id="enh_debug" type="bool" label="33021" default="true" />
+        <setting id="debuglog" type="action" label="30017" enable="true" option="close" action="RunPlugin(plugin://plugin.video.chaturbate/?mode=utils.ToggleDebug)" />
+        <setting type="lsep" label="33025" />
+        <setting id="sessionid" type="text" label="33026" default=""/>
+    </category>
+</settings>
+

@@ -1,0 +1,59 @@
+[B]Version 1.4.1[/B]
+- Main menu and favorites labels use i18n (Polish when Kodi language is pl_PL)
+- Search Models opens keyboard directly (removed Cumination keyword submenu)
+- Removed dead keyword backup/restore code from utils and basics
+
+[B]Version 1.4.0[/B]
+- Legacy cleanup: favorites module Chaturbate-only; restore from .bak filters non-Chaturbate entries
+- Migrate from Cumination (one-time) — clearer label in Settings and main menu Setup
+- Setup & Dependencies in main menu (repo install, missing deps, migration)
+- Fanart background preserved when poster fanart is enabled
+- Polish UI strings (pl_PL); improved Miami menu tiles
+- Log messages rebranded to ChaturbateTV
+
+[B]Version 1.3.2[/B]
+- One-click Dobbelina Repository install (bundled zip + dobbelina.github.io fallback)
+- Settings → Dependencies → Install missing dependencies
+
+[B]Version 1.3.1[/B]
+- Declare InputStream Adaptive and InputStream Helper as install dependencies
+
+[B]Version 1.3.0[/B]
+- Grouped main menu (gender folders + saved favorites)
+- Import Chaturbate favorites from Cumination
+- Miami color consistency in room listings
+
+[B]Version 1.2.2[/B]
+- Fix Kodi icon cache on upgrade (new icon file + auto thumbnail purge)
+- Fix startup crash when Common Plugin Cache is not installed (NameError on import)
+
+[B]Version 1.2.1[/B]
+- Fix startup crash (safe argv, age gate, PIN, error logging)
+
+[B]Version 1.2.0[/B]
+- Removed hard dependencies on ResolveURL and Common Plugin Cache (fixes zip install errors)
+- InputStream Adaptive only extra requirement for playback
+
+[B]Version 1.1.2[/B]
+- Relaxed dependency versions for easier install after removing Cumination
+
+[B]Version 1.1.1[/B]
+- Fix Kodi label colors (named colors instead of broken hex)
+- Menu thumbnails with visible Miami Nights labels
+- Poster fanart enabled by default for larger category tiles
+
+[B]Version 1.1.0[/B]
+- Miami Nights visual theme (icon, fanart, menu thumbnails)
+- Synthwave color palette in menus and room listings
+- Default widescreen view enabled for TV
+
+[B]Version 1.0.2[/B]
+- Renamed to ChaturbateTV
+
+[B]Version 1.0.1[/B]
+- Display name: Chaturbate Lite (easier to tell apart from Cumination)
+
+[B]Version 1.0.0[/B]
+- Fork of Cumination — Chaturbate only
+- Direct launch into Chaturbate menu
+- Full HLS proxy for stable streams (from Cumination)

@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.chaturbate" name="ChaturbateTV" provider-name="Cumination fork" version="1.4.1">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="inputstream.adaptive" />
+        <import addon="script.module.inputstreamhelper" />
+        <import addon="script.common.plugin.cache" optional="true" />
+        <import addon="repository.dobbelina" version="1.0.4" optional="true" />
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL 2.0</license>
+        <summary lang="en_GB">Chaturbate webcams for Kodi</summary>
+        <summary lang="pl_PL">Kamery Chaturbate w Kodi</summary>
+        <description lang="en_GB">ChaturbateTV — Chaturbate with HLS proxy.[CR][CR]Main menu → Setup &amp; Dependencies for one-click repo install.[CR]Settings → Favorites → Migrate from Cumination (one-time).</description>
+        <description lang="pl_PL">ChaturbateTV — Chaturbate z lokalnym proxy HLS.[CR][CR]Menu główne → Konfiguracja i zależności.[CR]Ustawienia → Ulubione → Migracja z Cumination (jednorazowo).</description>
+        <disclaimer lang="en_GB">Fork of Cumination (GPL 2.0). Not affiliated with Chaturbate.</disclaimer>
+        <assets>
+            <icon>icon-chaturbatetv.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.cumination" name="Cumination" provider-name="Cumination" version="1.1.190">
     <requires>
         <import addon="script.module.six" />
@@ -77,7 +105,7 @@ FINALE RELEASE, CUMINATION FROM HERE ON
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Unofficial Addons for Kodi</summary>
-		<description>For Cumination Updates
+		<description>For Cumination and ChaturbateTV updates
 Please visit
 https://github.com/dobbelina/repository.dobbelina/issues
 for support!
