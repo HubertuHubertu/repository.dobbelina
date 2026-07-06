@@ -1,0 +1,50 @@
+name: Deploy Kodi install page
+
+# Publishes repository.chaturbatetv-*.zip + index.html to HubertuHubertu.github.io
+# One-time setup: see docs/GITHUB-PAGES.md
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'repository.chaturbatetv/**'
+      - 'pages/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository.dobbelina
+        uses: actions/checkout@v4
+
+      - name: Read repository addon version
+        id: meta
+        run: |
+          VERSION=$(grep -oP 'version="\K[^"]+' repository.chaturbatetv/addon.xml | head -1)
+          ZIP="repository.chaturbatetv-${VERSION}.zip"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "zip=${ZIP}" >> "$GITHUB_OUTPUT"
+          echo "Building ${ZIP}"
+
+      - name: Build pages bundle
+        run: |
+          VERSION="${{ steps.meta.outputs.version }}"
+          ZIP="${{ steps.meta.outputs.zip }}"
+          mkdir -p build/pages
+          (cd repository.chaturbatetv && zip -r "../build/pages/${ZIP}" . -x '*.git*')
+          sed -e "s/@VERSION@/${VERSION}/g" -e "s/@ZIP@/${ZIP}/g" \
+            pages/index.html.template > build/pages/index.html
+          ls -la build/pages/
+
+      - name: Deploy to hubertuhubertu.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          external_repository: HubertuHubertu/HubertuHubertu.github.io
+          publish_branch: master
+          publish_dir: build/pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "Deploy repository zip ${{ steps.meta.outputs.zip }}"

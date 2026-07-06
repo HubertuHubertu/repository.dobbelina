@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChaturbateTV Repository</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    code { background: #f4f4f4; padding: 0.1rem 0.35rem; border-radius: 4px; }
+    a.zip { font-size: 1.1rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>ChaturbateTV Repository</h1>
+  <p><a class="zip" href="@ZIP@">@ZIP@</a></p>
+  <h2>Instalacja w Kodi</h2>
+  <ol>
+    <li>Ustawienia &rarr; Menedżer plików &rarr; Dodaj źródło</li>
+    <li>Ścieżka: <code>https://hubertuhubertu.github.io/</code></li>
+    <li>Dodatki &rarr; Zainstaluj z pliku zip &rarr; wybierz zip powyżej</li>
+    <li>Dodatki &rarr; Zainstaluj z repozytorium &rarr; ChaturbateTV Repository</li>
+  </ol>
+  <p><small>Repository addon v@VERSION@ &middot; Aktualizacje addonu przez Kodi automatycznie z GitHub.</small></p>
+</body>
+</html>
