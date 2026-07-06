@@ -17,6 +17,13 @@ REPO_ID = 'repository.dobbelina'
 REPO_ZIP_NAME = 'repository.dobbelina-1.0.4.zip'
 REPO_URL = 'https://dobbelina.github.io/{0}'.format(REPO_ZIP_NAME)
 
+CBTV_REPO_ID = 'repository.chaturbatetv'
+CBTV_REPO_ZIP_NAME = 'repository.chaturbatetv-1.0.0.zip'
+CBTV_REPO_URL = (
+    'https://raw.githubusercontent.com/HubertuHubertu/repository.dobbelina/master/{0}'
+    .format(CBTV_REPO_ZIP_NAME)
+)
+
 # Hard deps from addon.xml (Kodi should pull these on install; helper for manual repair)
 HARD_DEPS = (
     'script.module.six',
@@ -37,8 +44,51 @@ def _is_installed(addon_id):
         return False
 
 
-def _bundled_repo_zip():
-    return os.path.join(rootDir, 'resources', 'packages', REPO_ZIP_NAME)
+def _bundled_repo_zip(name):
+    return os.path.join(rootDir, 'resources', 'packages', name)
+
+
+def _install_repo_zip(repo_id, zip_name, remote_url, title, ok_message):
+    if _is_installed(repo_id):
+        utils.dialog.ok('ChaturbateTV', '{0} is already installed.'.format(title))
+        return
+
+    local_zip = _bundled_repo_zip(zip_name)
+    if os.path.isfile(local_zip):
+        target = TRANSLATEPATH(local_zip)
+    else:
+        target = remote_url
+
+    try:
+        if target.startswith('http'):
+            xbmc.executebuiltin('InstallZip({0})'.format(urllib_parse.quote(target, safe='')))
+        else:
+            xbmc.executebuiltin('InstallZip({0})'.format(target))
+        utils.dialog.ok('ChaturbateTV', ok_message)
+    except Exception as exc:
+        xbmc.log('ChaturbateTV repo install: {0}'.format(exc), xbmc.LOGERROR)
+        utils.dialog.ok('ChaturbateTV', 'Could not start repository install.[CR][CR]{0}'.format(remote_url))
+
+
+@url_dispatcher.register()
+def install_chaturbatetv_repo():
+    if not utils.dialog.yesno(
+        'ChaturbateTV Repository',
+        'Install ChaturbateTV Repository from GitHub?[CR][CR]'
+        'After install: Add-ons → Install from repository → ChaturbateTV Repository → ChaturbateTV.[CR][CR]'
+        'Confirm any Kodi security prompts.',
+        nolabel='Cancel',
+        yeslabel='Install',
+    ):
+        return
+    _install_repo_zip(
+        CBTV_REPO_ID,
+        CBTV_REPO_ZIP_NAME,
+        CBTV_REPO_URL,
+        'ChaturbateTV Repository',
+        'Repository install started.[CR][CR]'
+        'Then: Add-ons → Install from repository → ChaturbateTV Repository.',
+    )
 
 
 @url_dispatcher.register()
@@ -57,25 +107,14 @@ def install_dobbelina_repo():
     ):
         return
 
-    local_zip = _bundled_repo_zip()
-    if os.path.isfile(local_zip):
-        target = TRANSLATEPATH(local_zip)
-    else:
-        target = REPO_URL
-
-    try:
-        if target.startswith('http'):
-            xbmc.executebuiltin('InstallZip({0})'.format(urllib_parse.quote(target, safe='')))
-        else:
-            xbmc.executebuiltin('InstallZip({0})'.format(target))
-        utils.dialog.ok(
-            'ChaturbateTV',
-            'Repository install started.[CR][CR]'
-            'After it finishes: Add-ons → My add-ons → Download → Install from repository → Dobbelina.',
-        )
-    except Exception as exc:
-        xbmc.log('ChaturbateTV repo install: {0}'.format(exc), xbmc.LOGERROR)
-        utils.dialog.ok('ChaturbateTV', 'Could not start repository install. Try manually from https://dobbelina.github.io/')
+    _install_repo_zip(
+        REPO_ID,
+        REPO_ZIP_NAME,
+        REPO_URL,
+        'Dobbelina Repository',
+        'Repository install started.[CR][CR]'
+        'After it finishes: Add-ons → My add-ons → Download → Install from repository → Dobbelina.',
+    )
 
 
 @url_dispatcher.register()
@@ -88,7 +127,7 @@ def install_missing_deps():
         utils.dialog.ok('ChaturbateTV', 'All dependencies are already installed.')
         return
 
-    if not _is_installed(REPO_ID) and missing_opt:
+    if not _is_installed(REPO_ID) and not _is_installed(CBTV_REPO_ID) and missing_opt:
         if utils.dialog.yesno(
             'Dependencies',
             'Some optional modules need Dobbelina Repository.[CR]Install it now?',

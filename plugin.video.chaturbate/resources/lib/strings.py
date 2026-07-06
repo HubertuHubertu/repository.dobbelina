@@ -148,5 +148,5 @@ STRINGS = {
     'fav_moved_up': 33155,
     'fav_moved_bottom': 33156,
     'fav_no_backup': 33157,
-    'thumb_cleared': 33158,
+    'install_cbtv_repo': 33159,
 }

@@ -300,3 +300,7 @@ msgstr "Brak ulubionych do kopii zapasowej"
 msgctxt "#33158"
 msgid "Chaturbate images cleared"
 msgstr "Miniatury Chaturbate wyczyszczone"
+
+msgctxt "#33159"
+msgid "Install ChaturbateTV Repository"
+msgstr "Zainstaluj repozytorium ChaturbateTV"

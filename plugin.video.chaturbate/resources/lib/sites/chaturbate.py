@@ -93,6 +93,10 @@ def Main():
 def SetupMenu(url):
     i = utils.i18n
     site.add_dir(
+        mt.c(mt.PINK, i('install_cbtv_repo')),
+        '', 'utils.install_chaturbatetv_repo', mt.img('deps'), Folder=False,
+    )
+    site.add_dir(
         mt.c(mt.CYAN, i('install_dobbelina')),
         '', 'utils.install_dobbelina_repo', mt.img('deps'), Folder=False,
     )

@@ -879,3 +879,7 @@ msgstr ""
 msgctxt "#33158"
 msgid "Chaturbate images cleared"
 msgstr ""
+
+msgctxt "#33159"
+msgid "Install ChaturbateTV Repository"
+msgstr ""

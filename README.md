@@ -33,14 +33,15 @@ Lightweight Chaturbate-only fork of Cumination for Kodi (Android TV friendly).
 
 - **HLS proxy** for stable live streams
 - **Miami Nights** UI theme
-- **One-click** Dobbelina repo + dependency install from the addon menu
+- **One-click** ChaturbateTV Repository (GitHub auto-updates) + Dobbelina deps from the addon menu
 - **Favorites** with optional one-time migration from Cumination
 
-Install via this repository (after adding `repository.dobbelina`) or from zip:  
-`plugin.video.chaturbate-1.4.1.zip`
+Install **ChaturbateTV Repository** in Kodi (zip):  
+`https://raw.githubusercontent.com/HubertuHubertu/repository.dobbelina/master/repository.chaturbatetv-1.0.0.zip`
 
-Direct Kodi repo URL (raw):  
-`https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml`
+Then: Add-ons → Install from repository → **ChaturbateTV Repository** → ChaturbateTV.
+
+Or direct addon zip: `plugin.video.chaturbate-1.4.2.zip`
 
 ## Cumination (`plugin.video.cumination`)
 
