@@ -8,6 +8,7 @@ on:
     branches: [master, main]
     paths:
       - 'repository.chaturbatetv/**'
+      - 'repository.chaturbatetv-*.zip'
       - 'pages/**'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
@@ -22,7 +23,7 @@ jobs:
       - name: Read repository addon version
         id: meta
         run: |
-          VERSION=$(grep -oP 'version="\K[^"]+' repository.chaturbatetv/addon.xml | head -1)
+          VERSION=$(grep -oP '<addon[^>]*\bversion="\K[^"]+' repository.chaturbatetv/addon.xml | head -1)
           ZIP="repository.chaturbatetv-${VERSION}.zip"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
           echo "zip=${ZIP}" >> "$GITHUB_OUTPUT"
@@ -33,10 +34,23 @@ jobs:
           VERSION="${{ steps.meta.outputs.version }}"
           ZIP="${{ steps.meta.outputs.zip }}"
           mkdir -p build/pages
-          (cd repository.chaturbatetv && zip -r "../build/pages/${ZIP}" . -x '*.git*')
+          if [ -f "${ZIP}" ]; then
+            cp "${ZIP}" "build/pages/${ZIP}"
+          else
+            (cd repository.chaturbatetv && zip -r "../build/pages/${ZIP}" . -x '*.git*')
+          fi
           sed -e "s/@VERSION@/${VERSION}/g" -e "s/@ZIP@/${ZIP}/g" \
             pages/index.html.template > build/pages/index.html
           ls -la build/pages/
+
+      - name: Require Pages deploy token
+        env:
+          PAGES_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$PAGES_TOKEN" ]; then
+            echo "::error::Secret PAGES_DEPLOY_TOKEN is missing in repository.dobbelina settings."
+            exit 1
+          fi
 
       - name: Deploy to hubertuhubertu.github.io
         uses: peaceiris/actions-gh-pages@v4.1.0
