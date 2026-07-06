@@ -1,3 +1,8 @@
+[B]Version 1.4.4[/B]
+- Fix repo install: dependency sources (Kodi Omega + Gujal) like Dobbelina
+- Remove circular repository.chaturbatetv dependency
+- Rebuild zip for Kodi repository installer compatibility
+
 [B]Version 1.4.3[/B]
 - Fix crash opening Female/Male/Couple/Trans menu (empty url parameter on Kodi 22)
 

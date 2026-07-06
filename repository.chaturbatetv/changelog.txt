@@ -1,2 +1,5 @@
+[B]Version 1.0.1[/B]
+- Add Kodi Omega + Gujal dependency dirs (fixes install-from-repository on Kodi 22)
+
 [B]Version 1.0.0[/B]
 - Initial ChaturbateTV repository (GitHub raw updates)

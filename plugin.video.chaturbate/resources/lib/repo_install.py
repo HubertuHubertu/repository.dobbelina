@@ -18,7 +18,7 @@ REPO_ZIP_NAME = 'repository.dobbelina-1.0.4.zip'
 REPO_URL = 'https://dobbelina.github.io/{0}'.format(REPO_ZIP_NAME)
 
 CBTV_REPO_ID = 'repository.chaturbatetv'
-CBTV_REPO_ZIP_NAME = 'repository.chaturbatetv-1.0.0.zip'
+CBTV_REPO_ZIP_NAME = 'repository.chaturbatetv-1.0.1.zip'
 CBTV_REPO_URL = (
     'https://raw.githubusercontent.com/HubertuHubertu/repository.dobbelina/master/{0}'
     .format(CBTV_REPO_ZIP_NAME)

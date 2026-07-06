@@ -1,0 +1,29 @@
+name: Build addon zips
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'plugin.video.chaturbate/**'
+      - 'repository.chaturbatetv/**'
+      - 'chaturbatetv-addons.xml'
+      - 'tools/build_zips.py'
+      - '.github/workflows/build-addon-zips.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build Kodi-compatible zips
+        run: python3 tools/build_zips.py
+
+      - name: Commit rebuilt zips
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Rebuild addon zips for Kodi repository."
+          file_pattern: '*.zip chaturbatetv-addons.xml.md5'

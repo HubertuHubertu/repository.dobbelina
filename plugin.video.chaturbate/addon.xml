@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<addon id="plugin.video.chaturbate" name="ChaturbateTV" provider-name="Cumination fork" version="1.4.3">
+<addon id="plugin.video.chaturbate" name="ChaturbateTV" provider-name="Cumination fork" version="1.4.4">
 
     <requires>
 
@@ -15,8 +15,6 @@
         <import addon="script.module.inputstreamhelper" />
 
         <import addon="script.common.plugin.cache" optional="true" />
-
-        <import addon="repository.chaturbatetv" version="1.0.0" optional="true" />
 
     </requires>
 
